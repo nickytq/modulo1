@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Básico</title>
+</head>
+<body>
+
+    <h2>CRUD Básico con JavaScript</h2>
+
+    <!-- FORMULARIO -->
+    <input type="hidden" id="indice">
+
+    <label>Nombre:</label>
+    <input type="text" id="nombre">
+    <br><br>
+
+    <label>Edad:</label>
+    <input type="number" id="edad">
+    <br><br>
+
+    <button onclick="guardar()">Guardar</button>
+    <button onclick="actualizar()">Actualizar</button>
+
+    <hr>
+
+    <h3>Lista de Registros</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+
+<script>
+
+    // ARRAY DONDE SE GUARDAN LOS DATOS
+    let personas = [];
+
+    // FUNCIÓN GUARDAR (CREATE)
+    function guardar() {
+
+        let nombre = document.getElementById("nombre").value;
+        let edad = document.getElementById("edad").value;
+
+        // CONDICIONAL
+        if (nombre === "" || edad === "") {
+            alert("Todos los campos son obligatorios");
+        } else {
+
+            // OBJETO
+            let persona = {
+                nombre: nombre,
+                edad: edad
+            };
+
+            // SECUENCIAL
+            personas.push(persona);
+            limpiar();
+            mostrar();
+        }
+    }
+
+    // FUNCIÓN MOSTRAR (READ)
+    function mostrar() {
+
+        let tabla = document.getElementById("tabla");
+        tabla.innerHTML = "";
+
+        // ESTRUCTURA REPETITIVA
+        for (let i = 0; i < personas.length; i++) {
+
+            tabla.innerHTML += `
+                <tr>
+                    <td>${personas[i].nombre}</td>
+                    <td>${personas[i].edad}</td>
+                    <td>
+                        <button onclick="editar(${i})">Editar</button>
+                        <button onclick="eliminar(${i})">Eliminar</button>
+                    </td>
+                </tr>
+            `;
+        }
+    }
+
+    // FUNCIÓN EDITAR
+    function editar(i) {
+
+        document.getElementById("nombre").value = personas[i].nombre;
+        document.getElementById("edad").value = personas[i].edad;
+        document.getElementById("indice").value = i;
+    }
+
+    // FUNCIÓN ACTUALIZAR (UPDATE)
+    function actualizar() {
+
+        let i = document.getElementById("indice").value;
+        let nombre = document.getElementById("nombre").value;
+        let edad = document.getElementById("edad").value;
+
+        if (nombre === "" || edad === "") {
+            alert("No se pueden dejar campos vacíos");
+        } else {
+
+            personas[i].nombre = nombre;
+            personas[i].edad = edad;
+
+            limpiar();
+            mostrar();
+        }
+    }
+
+    // FUNCIÓN ELIMINAR (DELETE)
+    function eliminar(i) {
+
+        if (confirm("¿Desea eliminar este registro?")) {
+            personas.splice(i, 1);
+            mostrar();
+        }
+    }
+
+    // LIMPIAR CAMPOS
+    function limpiar() {
+        document.getElementById("nombre").value = "";
+        document.getElementById("edad").value = "";
+        document.getElementById("indice").value = "";
+    }
+
+</script>
+
+</body>
+</html>

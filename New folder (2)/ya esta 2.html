@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Base de inventario de libros </title>
+    <!-- ENLACE A JAVASCRIPT -->
+    <script src="2,0.js"></script>
+    <!-- BOOTSTRAP 5 ENLACE POR CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Base de inventario de libros para bibliotecas </h4>
+        </div>
+
+        <div class="card-body">
+
+            <input type="hidden" id="indice">
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <label class="form-label">Genero</label>
+                    <input type="text" id="genero" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" id="nombre" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Autor</label>
+                    <input type="text" id="autor" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Fecha</label>
+                    <input type="number" id="fecha" class="form-control">
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <button class="btn btn-success" onclick="guardar()">Guardar</button>
+
+                <button class="btn btn-warning" onclick="actualizar()">Actualizar</button>
+            </div>
+
+            <hr>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th width="200">Genero</th>
+                            <th width="200">Nombre</th>
+                            <th width="200">Autor</th>
+                            <th width="200">Fecha</th>
+                            <th width="200">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla"></tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

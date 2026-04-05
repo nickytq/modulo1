@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Fondo Estrellas Cayendo</title>
+
+<style>
+
+/* Fondo */
+body{
+margin:0;
+background:linear-gradient(to bottom,#020617,#000000);
+height:100vh;
+overflow:hidden;
+font-family:Arial;
+}
+
+/* Contenedor */
+.estrellas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+/* Estrella */
+.estrella{
+position:absolute;
+background:white;
+border-radius:50%;
+box-shadow:0 0 8px white;
+animation:caer linear infinite;
+}
+
+/* Animación */
+@keyframes caer{
+0%{
+transform:translateY(-50px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="estrellas" id="estrellas"></div>
+
+<script>
+
+/* Cantidad de estrellas */
+const cantidad = 150;
+
+const contenedor = document.getElementById("estrellas");
+
+for(let i=0;i<cantidad;i++){
+
+let estrella = document.createElement("div");
+estrella.classList.add("estrella");
+
+/* tamaño aleatorio */
+let size = Math.random()*3 + 1;
+estrella.style.width = size+"px";
+estrella.style.height = size+"px";
+
+/* posición horizontal */
+estrella.style.left = Math.random()*100 + "%";
+
+/* duración aleatoria */
+estrella.style.animationDuration = (Math.random()*6 + 4)+"s";
+
+/* retraso para que no caigan todas juntas */
+estrella.style.animationDelay = Math.random()*10 + "s";
+
+contenedor.appendChild(estrella);
+
+}
+
+</script>
+
+</body>
+</html>
