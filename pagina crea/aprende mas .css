@@ -63,6 +63,7 @@ text-decoration:  underline;
     color: white;
     padding: 60px 0;
     background-color: rgba(13, 29, 49, 0.9);
+    justify-content: center;
 }
 .parrafo{
     font-size: 17px;
@@ -85,6 +86,8 @@ text-decoration:  underline;
     hyphens: auto;
     color: white;
     margin: 0;
+    max-width: 850px;
+
 }
 .fila{
     display: flex;
