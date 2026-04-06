@@ -46,68 +46,53 @@ text-decoration:  underline;
     text-align: center;
     margin: 40px 0;
 }
-.separacion{
-    height: 80px;
+.lista{
+    list-style-type: disc;
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    padding-left: 20px ;
+    margin: 20px 0 ;
+}
+.lista li{
+    margin-bottom: 15px;
+    padding-left: 10px;
 }
 .fila{
     display: flex;
     align-items: center;
-    gap: 50px;
-    max-width: 1100px;
+    justify-content: center;
+    max-width: 1200px;
     padding: 0 20px;
     margin: auto;
+    justify-content: flex-end;
 }
 .contenido{
     width: 100%;
     font-size: 16px;
     color: white;
     padding: 60px 0;
+    text-align: justify;
     background-color: rgba(13, 29, 49, 0.9);
-    justify-content: center;
-}
-.parrafo{
-    font-size: 17px;
-    display: flex;
-    width: 100%;
-    text-align: justify;
-    padding: 25px;
-    line-height: 1.8;
-    hyphens: auto;
-    color: white;
-    margin: 0;
-}
-.parrafo1{
-    font-size: 17px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding: 25px;
-    line-height: 1.8;
-    hyphens: auto;
-    color: white;
-    margin: 0;
-    max-width: 850px;
-
-}
-.fila{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    max-width: 1200px;
-    padding: 0 20px;
-    margin: auto;
-}
-.contenido1{
-    width: 100%;
-    font-size: 16px;
-    color: white;
-    padding: 60px 0;
-    text-align: justify;
 }
 .texto{
     width: 55%;
     padding: 25px;
+}
+.parrafo{
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    line-height: 1.8;
+    hyphens: auto;
+    margin: 0;
+}
+.antesfila{
     color: white;
+    align-items: center;
+    text-align: center;
 }
 
 
@@ -173,15 +158,12 @@ text-decoration:  underline;
 
 
 
-
-
-
-
-
-
-
-
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
 
 
 
