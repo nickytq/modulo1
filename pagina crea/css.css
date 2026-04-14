@@ -10,7 +10,7 @@ header{
     background-color:rgb(24, 35, 133);
     color: white;
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     padding: 15px 30px;
 }
@@ -30,15 +30,82 @@ header{
     margin-left: 30px;
     font-size: 20px;
 }
+nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left:auto ;
+}
 nav a {
     color: white;
-gap: 30px;
+
     font-size: 16px; 
     text-decoration: none;
 }
 nav a:hover {
 text-decoration:  underline;
 }
+
+.switch{
+    margin-left: 30px;
+}
+.checkbox {
+    display: none;
+}
+
+.slider {
+    width: 60px;
+    height: 30px;
+    background-color: lightgray;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 4px solid transparent;
+    transition: .3s;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.25) inset;
+    cursor: pointer;
+}
+
+.slider::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(spain4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6%;
+    transition: .3s;
+    transform: translateX(2px);
+}
+
+.checkbox:checked ~ .slider::before {
+    contain: '';
+    display: block;
+    width: 26px;
+    height: 26px;
+    transform: translateX(30px);
+    background-image: url(usa3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.checkbox:checked ~ .slider {
+    background-color: #2196F3;
+}
+
+.checkbox:active ~ .slider::before {
+    transform: translate(0);
+}
+
+
+
+
 .titulo1{
     color: white;
     font-size: 32px;

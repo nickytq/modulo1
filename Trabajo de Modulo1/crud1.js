@@ -114,7 +114,6 @@ function eliminar(i) {
         mostrar();
     }
 
-   
 }
 
 function limpiar() {
