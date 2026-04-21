@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<header class="header">
+    <h1>Práctica HTML</h1>
+</header>
+<body>
+<div class="login">
+    <form action="">
+        <label for="">Nombre</label>
+        <input type="name" id="login_user" placeholder="Nombre">
+        <br><br>
+        <label for="">Contraseña</label>
+        <input type="password" id="login_password" placeholder="Contraseña">
+        <br><br>
+        <button type="button" onclick="aceptar()"  >Enviar</button>
+    </form>
+</div>
+    <h2>Registro</h2>
+    <div class="registro">
+        <form action="">
+            <label for="">Nombre</label>
+            <input type="name" id="register_user" placeholder="Nombre">
+            <br><br>
+            <label for="">Contraseña</label>
+            <input type="password" id="register_password" placeholder="Contraseña">
+            <br><br>
+            <button type="button" onclick="guardar()">Registrar</button>
+        </form>
+    </div>
+<script>
+        let usuarios = [];
+
+    if (localStorage.getItem("usuarios")) {
+        let usuariosJason = localStorage.getItem("usuarios"); 
+        console.log (usuariosJason); 
+        usuarios = JSON.parse(usuariosJason);
+        console.log (usuarios); 
+    } 
+
+    function guardar() {
+        let user = document.getElementById("register_user").value;
+        let password = document.getElementById("register_password").value;
+
+
+        if (user === "" || password === "") {
+            alert("Todos los campos son obligatorios");
+        }else if (password.length < 4) {
+            alert("La contraseña debe tener al menos 4 caracteres");
+        } else {
+
+            for (let contador_users = 0; contador_users < usuarios.length; contador_users++) {
+                let usuario = usuarios[contador_users];
+                if (user === usuario.user) {
+                    alert("El usuario ya existe, por favor elija otro nombre de usuario");
+                    return;
+                }
+            }
+
+            let usuario = {
+                user: user,
+                password: password
+            };
+            console.log(usuario);
+            
+            usuarios.push(usuario);
+
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+            limpiar();
+
+            window.location.href = "index.html";
+        }
+
+    }
+
+    function limpiar() {
+        document.getElementById("register_user").value = "";
+        document.getElementById("register_password").value = "";
+    }
+let usuario = [];
+
+function aceptar() {
+let inputUser = document.getElementById("login_user").value;
+    let inputPass = document.getElementById("login_password").value;
+    
+
+    let user = document.getElementById("login_user").value;
+    let password = document.getElementById("login_password").value;
+for (let i = 0; i < usuarios.length; i++) {
+        let u = usuarios[i]; // Use 'u' to avoid clashing with other names
+        
+        if (inputUser === u.user && inputPass === u.password) {
+            alert("Bienvenido " + u.user);
+            encontrado = true;
+            window.location.href = "dashboard.html"; // Or wherever you want to go
+            return;
+        }
+    }
+    let encontrado = false;
+
+    for (let contador_users = 0; contador_users < usuario.length; contador_users++) {
+        let usuario = usuario[contador_users];
+        if (user === usuario.user && password === usuario.password) {
+            alert("Bienvenido " + usuario.user);
+
+            encontrado = true;
+            return;
+        }
+    }
+        
+    if (encontrado == false) {
+        alert("Usuario o contraseña incorrectos");
+    }
+}
+</script>
+</body>
+</html>
