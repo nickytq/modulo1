@@ -22,7 +22,19 @@
             <h3>Skateboard</h3>
             <p>Precio: $100</p>
             <button onclick="agregar('Skateboard',100)">Agregar</button>
-            <img src="skateboard.jpg" alt="Skateboard">
+            <img src="137800-0-SK8DLX-Rose85.jpg.webp" alt="Skateboard">
+        </div>
+        <div class="productos">
+            <h3>Skateboard</h3>
+            <p>Precio: $50</p>
+            <button onclick="agregar('Skateboard',50)">Agregar</button>
+            <img src="141291-0-Element-Section825.jpg.webp" alt="Skateboard">
+        </div>
+        <div class="productos">
+            <h3>Skateboard</h3>
+            <p>Precio: $75</p>
+            <button onclick="agregar('Skateboard',75)">Agregar</button>
+            <img src="147754-0-Flip-PennyCheechAndChong50th8.jpg.webp" alt="Skateboard">
         </div>
     </div>
 </body>
