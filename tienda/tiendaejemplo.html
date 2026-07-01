@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Mi Tienda</h1>
+
+    <div class="contenedor">
+        <div class="producto">
+            <h3>Camisa</h3>
+            <p>Precio: $15</p>
+            <button onclick="agregar('Camisa',15)">Agregar</button>
+        </div>
+
+        <div class="producto">
+            <h3>Pantalón</h3>
+            <p>Precio: $25</p>
+            <button onclick="agregar('Pantalón',25)">Agregar</button>
+        </div>
+
+        <div class="producto">
+            <h3>Zapatos</h3>
+            <p>Precio: $40</p>
+            <button onclick="agregar('Zapatos',40)">Agregar</button>
+        </div>
+
+    </div>
+
+    <h2>Carrito</h2>
+
+    <ul id="lista"></ul>
+
+    <h3>Total: $<span id="total">0</span></h3>
+
+    <button onclick="vaciar()">Vaciar carrito</button>
+
+<script>
+
+let carrito = [];
+let total = 0;
+
+function agregar(nombre, precio){
+
+    carrito.push({
+        nombre:nombre,
+        precio:precio
+    });
+
+    total += precio;
+
+    mostrar();
+
+}
+
+function mostrar(){
+
+    let lista = document.getElementById("lista");
+    lista.innerHTML="";
+
+    carrito.forEach((producto)=>{
+
+        lista.innerHTML += `
+        <li>
+            ${producto.nombre} - $${producto.precio}
+        </li>
+        `;
+
+    });
+
+    document.getElementById("total").textContent = total;
+
+}
+
+function vaciar(){
+
+    carrito=[];
+    total=0;
+    mostrar();
+
+}
+
+</script>
+
+</body>
+</html>
