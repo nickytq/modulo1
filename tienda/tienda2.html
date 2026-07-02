@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Skateboards y mas</title>
+    <link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo" alt="skate">
+        </div>
+        <h1>Tienda de Skateboards y mas</h1>
+        <nav>
+            <a href="Contactos.html">Contactos</a>
+            <a href="Carrito.html">Carrito
+            </a>
+            <h2>Total: $<span id="total">0</span></h2>
+        </nav>
+    </header>
+    <div id="productos">
+            <img src="137800-0-SK8DLX-Rose85.jpg.webp" alt="Skateboard">
+            <h3>Skateboard 1</h3>
+            <p>Precio: $100</p>
+            <button onclick="agregar('Skateboard1',100)">Agregar al carrito</button>
+        </div>
+        <div class="productos"> 
+            <img src="141291-0-Element-Section825.jpg.webp" alt="Skateboard">
+            <h3>Skateboard 2</h3>
+            <p>Precio: $75</p>
+            <button onclick="agregar('Skateboard2',75)">Agregar al carrito</button>
+        </div>
+<footer>
+    <p>Hecho por Mateo&copy;</p>
+</footer>
+<script src="tienda.js"></script>
+</body>
+</html>
