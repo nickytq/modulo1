@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carritocompras.css">
     <title>Carrito de Compras</title>
 </head>
 <body>
@@ -16,12 +17,33 @@
     </nav>
     </header>
     <main>
-        <section id="productos"></section>
+        <section id="productos">
+        </section>
         <section class="resumen">
             <h2> Total: $<span id="total">0</span></h2>
             <button onclick="vaciarCarrito()">Vaciar carro</button>
             <button onclick="finalizarCompra()">Finalizar</button>
         </section>
+        <div id="sidebar" class="sidebar">
+            <div class="encabezado">
+                <h2>Mi carrito</h2>
+                <button onclick="cerrarCarrito()">X</button>
+            </div>
+            <div class="productos"></div>
+            <button onclick="vaciarCarrito()">Vaciar carrito</button>
+            <button onclick="abrirPago()">Finalizar compras</button>
+        </div>
+        <div id="modalPago" class="modal">
+            <div class="contenido-modal">
+                <h2>Pago</h2>
+                <input type="text" id="nombre" placeholder="Nombre del titular">
+                <input type="number" id="tarjeta" maxlength="16" placeholder="Numero de tarjeta">
+                <input type="month" id="fecha" placeholder="MM/YY">
+                <input type="password" id="cvv" maxlength="3" placeholder="CVV">
+                <button onclick="pagar()">Pago</button>
+                <button onclick="cerrarPago()">Cerrar</button>
+            </div>
+        </div>
     </main>
     <footer>
         <p>Hecho por Mateo&copy;</p>

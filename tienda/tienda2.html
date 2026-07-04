@@ -14,12 +14,11 @@
         <h1>Tienda de Skateboards y mas</h1>
         <nav>
             <a href="Contactos.html">Contactos</a>
-            <a href="carritocompras.html">Carrito
-            </a>
+            <a href="#" onclick="abrirCarrito(); return false;">Carrito</a>
         </nav>
     </header>
     <main>
-        <div id="productos">
+        <div id="productos" class="grid-productos">
             <div class="producto">
                 <img src="137800-0-SK8DLX-Rose85.jpg.webp" alt="Skateboard1">
                 <h3>Skateboard 1</h3>
@@ -31,6 +30,28 @@
                 <h3>Skateboard 2</h3>
                 <p>Precio: $75</p>
                 <button onclick="agregar('Skateboard2', 75)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <div class="encabezado-sidebar">
+                <h2>Carrito</h2>
+                <button onclick="cerrarCarrito()">X</button>
+            </div>
+            <div id="listaCarrito">
+            </div>
+            <h3>Total: $<span id="total">0</span></h3>
+            <button onclick="vaciarCarrito()">Vaciar carro</button>
+            <button onclick="abrirPago()">Finalizar compra</button>
+        </div>
+        <div id="modalPago" class="modal">
+            <div class="contenido-modal">
+                <h2>Pago</h2>
+                <input  required="text" id="nombre" placeholder="Nombre del titular">
+                <input  required="text" id="tarjeta" maxlength="16" placeholder="Numero de tarjeta">
+                <input  required="month" id="fecha" placeholder="MM/YY">
+                <input  required="password" id="cvv" maxlength="3" placeholder="CVV">
+                <button onclick="pagar()">Pago</button>
+                <button onclick="cerrarPago()">Cerrar</button>
             </div>
         </div>
     </main>

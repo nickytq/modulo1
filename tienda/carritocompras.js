@@ -30,3 +30,14 @@ function sumar(index){
     carrito[index].cantidad++;
     mostrarCarrito();
 }
+function restar(index){
+    carrito[index].cantidad--;
+    if (carrito[index].cantidad <= 0){
+        carrito.splice(index, 1);
+    }
+    mostrarCarrito();
+}
+function eliminar(index){
+    carrito.splice(index, 1);
+    mostrarCarrito();
+}
