@@ -12,6 +12,7 @@ function agregar (nombre,precio){
     }
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarContador();
+    mostrarCarrito()
     console.log("Producto agregado");
 }
 function actualizarContador(){
@@ -62,7 +63,7 @@ carrito.forEach((producto, index)=>{
     </div>
     `;
 });
-document.getElementById("total").textContetn = total;
+document.getElementById("total").textContent = total;
 localStorage.setItem("carrito", JSON.stringify(carrito))
 
 }
@@ -118,3 +119,24 @@ function pagar(){
     mostrarCarrito();
     actualizarContador();
 }
+const carrusel = document.getElementById("carrusel");
+document.getElementById("siguiente").onclick = () => {
+    carrusel.scrollBy({
+        left:250,
+        behavior:"smooth"
+    });
+};
+document.getElementById("anterior").onclick = () => {
+    carrusel.scrollBy({
+        left:-250,
+        behavior:"smooth"
+    });
+};
+let menu = document.getElementById("menu");
+function abrirMenu(){
+    menu.classList.add("activo");
+}
+function cerrarMenu(){
+    menu.classList.remove("activo");
+}
+localStorage.clear()

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Tienda</title>
+</head>
+<body>
+    <header>
+        <h1>Panel de administracio</h1>
+        <a href="tienda2.html">Regresar a tienda</a>
+    </header>
+    <main>
+        <div class="formulario">
+            <h2>Agregar Producto</h2>
+            <input type="text" id="nombre" placeholder="Nombre del producto">
+            <input type="number" id="precio" placeholder="Precio">
+            <select id="categoria">
+                <option >skateboard</option>
+                <option >Ropa</option>
+                <option >Zapatos</option>
+                <option >Accesorios</option>
+            </select>
+            <input type="text" id="imagen" placeholder="Nombre de la imagen">
+            <input type="number" id="stock" placeholder="Stock">
+            <button onclick="guardarProducto()">Guardar producto</button>
+        </div>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Categoria</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaProductos"></tbody>
+        </table>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

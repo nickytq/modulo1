@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi IA</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#111827;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .chat{
+            width:450px;
+            height:650px;
+            background:#1f2937;
+            border-radius:15px;
+            overflow:hidden;
+            display:flex;
+            flex-direction:column;
+            box-shadow:0 0 20px rgba(0,0,0,.4);
+        }
+
+        .header{
+            background:#2563eb;
+            color:white;
+            padding:20px;
+            text-align:center;
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        .mensajes{
+            flex:1;
+            padding:15px;
+            overflow-y:auto;
+        }
+
+        .msg{
+            margin:10px 0;
+            padding:10px;
+            border-radius:10px;
+            max-width:85%;
+            white-space:pre-wrap;
+        }
+
+        .user{
+            background:#2563eb;
+            color:white;
+            margin-left:auto;
+        }
+
+        .bot{
+            background:#374151;
+            color:white;
+        }
+
+        .inputArea{
+            display:flex;
+            padding:10px;
+            gap:10px;
+            background:#111827;
+        }
+
+        input{
+            flex:1;
+            padding:12px;
+            border:none;
+            border-radius:8px;
+            outline:none;
+        }
+
+        button{
+            background:#2563eb;
+            color:white;
+            border:none;
+            padding:12px 18px;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat">
+
+    <div class="header">
+        Mi IA 🤖
+    </div>
+
+    <div class="mensajes" id="mensajes"></div>
+
+    <div class="inputArea">
+        <input type="text" id="pregunta" placeholder="Escribe algo...">
+        <button onclick="enviar()">Enviar</button>
+    </div>
+
+</div>
+
+<script>
+
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then(res => res.json())
+    .then(data => console.log(data));
+
+const mensajes = document.getElementById("mensajes");
+
+function agregarMensaje(texto, clase){
+
+    const div=document.createElement("div");
+
+    div.className="msg "+clase;
+
+    div.textContent=texto;
+
+    mensajes.appendChild(div);
+
+    mensajes.scrollTop=mensajes.scrollHeight;
+
+}
+
+async function enviar(){
+
+    const input=document.getElementById("pregunta");
+
+    const texto=input.value.trim();
+
+    if(texto=="") return;
+
+    agregarMensaje(texto,"user");
+
+    input.value="";
+
+    agregarMensaje("Pensando...","bot");
+
+    try{
+
+        const respuesta=await fetch("https://api.openai.com/v1/chat/completions",{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization":"Bearer "+API_KEY
+            },
+
+            body:JSON.stringify({
+
+                model:"gpt-4.1-mini",
+
+                messages:[
+                    {
+                        role:"system",
+                        content:"Eres un asistente útil."
+                    },
+                    {
+                        role:"user",
+                        content:texto
+                    }
+                ]
+
+            })
+
+        });
+
+        const data=await respuesta.json();
+
+        mensajes.lastChild.remove();
+
+        agregarMensaje(data.choices[0].message.content,"bot");
+
+    }catch(error){
+
+        mensajes.lastChild.remove();
+
+        agregarMensaje("Error al conectar con la IA.","bot");
+
+    }
+
+}
+
+document.getElementById("pregunta").addEventListener("keypress",function(e){
+
+    if(e.key==="Enter"){
+        enviar();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
