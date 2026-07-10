@@ -34,7 +34,7 @@
     </header>
     <main>
         <section class="categorias">
-            <h2>Categoria</h2>
+            <h2>Explora nuestras categorias</h2>
             <div class="contenedor-carrusel">
                 <button class="flecha" id="anterior">&#10094;</button>
                 <div class="carrusel" id="carrusel">
@@ -225,10 +225,10 @@
         <div id="modalPago" class="modal">
             <div class="contenido-modal">
                 <h2>Pago</h2>
-                <input  required="text" id="nombre" placeholder="Nombre del titular">
-                <input  required="text" id="tarjeta" maxlength="16" placeholder="Numero de tarjeta">
-                <input  required="month" id="fecha" placeholder="MM/YY">
-                <input  required="password" id="cvv" maxlength="3" placeholder="CVV">
+                <input  type="text"  id="nombre" required placeholder="Nombre del titular">
+                <input  type="text"  id="tarjeta" maxlength="16" required placeholder="Numero de tarjeta">
+                <input  type="month"  id="fecha" required placeholder="MM/YY">
+                <input  type="password"  id="cvv" maxlength="3" required placeholder="CVV">
                 <button onclick="pagar()">Pago</button>
                 <button onclick="cerrarPago()">Cerrar</button>
             </div>
