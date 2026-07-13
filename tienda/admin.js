@@ -1,9 +1,3 @@
-if(localStorage.getItem("logueado") !== "true"){
-    alert("Debe iniciar sesion");
-    window.location = "login.html";
-}
-
-
 let productos = JSON.parse(localStorage.getItem("productos")) || []
 let editando = -1;
 function guardarProducto(){
@@ -85,5 +79,12 @@ mostrarProductos();
 
 function cerrarSesion(){
     localStorage.removeItem("logueado");
-    window.location.href = "login.html"
+    localStorage.removeItem("rol");
+    localStorage.removeItem("usuario");
+    window.location.href="iniciosesion.html";
+}
+if(localStorage.getItem("logueado")!=="true" ||
+    localStorage.getItem("rol")!=="admin"){
+    alert("Acceso denegado");
+    window.location.href="iniciosesion.html";
 }
