@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatos</title>
+    <link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+        <header>
+        <div class="logo">
+            <img src="logo" alt="skate">
+        </div>
+        <h1>Tienda de Skateboards y mas</h1>
+        <div class="acciones">
+            <button class="btn-menu" onclick="abrirMenu()">☰</button>
+        </div>
+        <div id="menu" class="menu">
+            <div class="menu-header">
+                <button onclick="cerrarMenu()">x</button>
+            </div>
+            <a href="acessorios.html">Accesorios</a>
+            <a href="ropa.html">Ropa</a>
+            <a href="tienda2.html">Skates</a>
+            <a href="iniciosesion.html">Inicio Sesion</a>
+            <a href="registrotienda.html">Registro</a>
+            <a href="inventario.html">Inventario (Admin)</a>
+        </div>
+        <nav>
+            <a href="Contactos.html">Contactos</a>
+            <a href="#" onclick="abrirCarrito(); return false;">Carrito</a>
+        </nav>
+
+    </header>
+    <main>
+        <section class="categorias">
+            <h2>Explora nuestras accesorios</h2>
+            <div class="contenedor-carrusel">
+                <button class="flecha" id="anterior">&#10094;</button>
+                <div class="carrusel" id="carrusel">
+                    <a href="tienda2.html" class="categoria">
+                        <img src="Tablas-de-skateboarding.png.webp" alt="tablas de skateboard">
+                        <h3>Skateboard</h3>
+                    </a>
+                    <a href="ropa.html" class="categoria">
+                        <img src="modern-skate-style.jpg" alt="Ropa">
+                        <h3>Ropa</h3>
+                    </a>
+                    <a href="zapatos.html" class="categoria">
+                        <img src="zapatos.png" alt="Zapatos">
+                        <h3>Zapatos</h3>
+                    </a>
+                    <a href="acessorios.html" class="categoria">
+                        <img src="" alt="">
+                        <h3>Accesorios</h3>
+                    </a>
+                </div>
+                <button class="flecha" id="siguiente">&#10095;</button>
+            </div>
+        </section>
+
+        <div id="productos" class="grid-productos">
+            <div class="producto">
+                <img src="shoes.jpg"        alt="Skateboard">
+                <h3>zapatos 1</h3>
+                <p>Precio: $100</p>
+                <button onclick="agregar('zapatos1', 100)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes2.jpeg" alt="Skateboard">
+                <h3>zapatos 2</h3>
+                <p>Precio: $75</p>
+                <button onclick="agregar('zapatos2', 75)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes3.jpeg" alt="skateboard">
+                <h3>zapatos 3</h3>
+                <p>precio: $100</p>
+                <button onclick="agregar('zapatos3', 100)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes5.webp" alt="skateboar">
+                <h3>zapatos 4</h3>
+                <p>Precio: $65</p>
+                <button onclick="agregar('zapatos4',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes10.webp" alt="skateboard">
+                <h3>Skateboard 5</h3>
+                <p>Precio: $85</p>
+                <button onclick="agregar('zapatos5',85)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes11.jpg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <p>Precio: $85</p>
+                <button onclick="agregar('zapatos6 ',85)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes12.webp" alt="Skateboard">
+                <h3>zapatos </h3>
+                <p>Precio: $85</p>
+                <button onclick="agregar('zapatos7 ',85)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes13.jpg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <p>Precio: $85</p>
+                <button onclick="agregar('skateboard8',85)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes12.webp" alt="Skateboard">
+                <h3>zapatos </h3>
+                <p>Precio: $85</p>
+                <button onclick="agregar('skateboard9',85)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes15.jpeg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <p>Precio: $85</p>
+                <button onclick="agregar('skateboard10',85)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes16.jpeg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <p>Precio: $85</p>
+                <button onclick="agregar('zapatos11',85)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes17.jpeg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <p>Precio: $85</p>
+                <button onclick="agregar('zapatos12',85)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes6.jpeg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos13',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes7.webp" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos14',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes8.webp" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos15',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes9.webp" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos16',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes11.jpg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos17',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes16.jpeg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos18',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes7.webp" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos19',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes11.jpg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos20',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes2.jpeg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos21',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes14.webp" alt="Skateboard">
+                <h3>Skateboard </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('skateboard22',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes7.webp" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos23',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes.jpg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos24',85 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="shoes15.jpeg" alt="Skateboard">
+                <h3>zapatos </h3>
+                <P>Precio: $85</P>
+                <button onclick="agregar('zapatos25 ',85 )">Agregar al carrito</button>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <div class="encabezado-sidebar">
+                <h2>Carrito</h2>
+                <button onclick="cerrarCarrito()">X</button>
+            </div>
+            <div id="listaCarrito">
+            </div>
+            <h3>Total: $<span id="total">0</span></h3>
+            <button onclick="vaciarCarrito()">Vaciar carro</button>
+            <button onclick="abrirPago()">Finalizar compra</button>
+        </div>
+        <div id="modalPago" class="modal">
+            <div class="contenido-modal">
+                <h2>Pago</h2>
+                <input  type="text"  id="nombre" required placeholder="Nombre del titular">
+                <input  type="text"  id="tarjeta" maxlength="16" required placeholder="Numero de tarjeta">
+                <input  type="month"  id="fecha" required placeholder="MM/YY">
+                <input  type="password"  id="cvv" maxlength="3" required placeholder="CVV">
+                <button onclick="pagar()">Pago</button>
+                <button onclick="cerrarPago()">Cerrar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+    <p>Hecho por Mateo&copy;</p>
+    </footer>
+    <script src="tienda.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ropa</title>
+    <link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+    <body>
+    <header>
+        <div class="logo">
+            <img src="logo" alt="skate">
+        </div>
+        <h1>Tienda de Skateboards y mas</h1>
+        <div class="acciones">
+            <button class="btn-menu" onclick="abrirMenu()">☰</button>
+        </div>
+        <div id="menu" class="menu">
+            <div class="menu-header">
+                <button onclick="cerrarMenu()">x</button>
+            </div>
+            <a href="Zapatos.html">Zapatos</a>
+            <a href="acessorios.html">Ropa</a>
+            <a href="tienda2.html">Skates</a>
+            <a href="iniciosesion.html">Inicio Sesion</a>
+            <a href="registrotienda.html">Registro</a>
+            <a href="inventario.html">Inventario (Admin)</a>
+        </div>
+        <nav>
+            <a href="Contactos.html">Contactos</a>
+            <a href="#" onclick="abrirCarrito(); return false;">Carrito</a>
+        </nav>
+
+    </header>
+    <main>
+        <section class="categorias">
+            <h2>Explora nuestras accesorios</h2>
+            <div class="contenedor-carrusel">
+                <button class="flecha" id="anterior">&#10094;</button>
+                <div class="carrusel" id="carrusel">
+                    <a href="tienda2.html" class="categoria">
+                        <img src="Tablas-de-skateboarding.png.webp" alt="tablas de skateboard">
+                        <h3>Skateboard</h3>
+                    </a>
+                    <a href="ropa.html" class="categoria">
+                        <img src="modern-skate-style.jpg" alt="Ropa">
+                        <h3>Ropa</h3>
+                    </a>
+                    <a href="zapatos.html" class="categoria">
+                        <img src="zapatos.png" alt="Zapatos">
+                        <h3>Zapatos</h3>
+                    </a>
+                    <a href="acessorios.html" class="categoria">
+                        <img src="" alt="">
+                        <h3>Accesorios</h3>
+                    </a>
+                </div>
+                <button class="flecha" id="siguiente">&#10095;</button>
+            </div>
+        </section>
+
+        <div id="productos" class="grid-productos">
+            <div class="producto">
+                <img src="camisa5.webp"        alt="Skateboard">
+                <h3>camisa  1</h3>
+                <p>Precio: $100</p>
+                <button onclick="agregar('camisa 1', 100)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa2.jpg" alt="Skateboard">
+                <h3>camisa  2</h3>
+                <p>Precio: $75</p>
+                <button onclick="agregar('camisa 2', 75)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa1.jpeg" alt="skateboard">
+                <h3>camisa  3</h3>
+                <p>precio: $100</p>
+                <button onclick="agregar('camisa 3', 100)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa3.jpg" alt="">                
+                <h3>camisa  4</h3>
+                <p>Precio: $65</p>
+                <button onclick="agregar('camisa 4',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa4.webp" alt="skateboard">
+                <h3>camisa  5</h3>
+                <p>Precio: $85</p>
+                <button onclick="agregar('camisa 5',85)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa5.webp" alt="Skateboard">
+                <h3>camisa  </h3>
+                <p>Precio: $</p>
+                <button onclick="agregar('camisa 6 ',6565)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa3.jpg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <p>Precio: $65</p>
+                <button onclick="agregar('camisa 7 ',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa1.jpeg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <p>Precio: $65</p>
+                <button onclick="agregar('camisa 8',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa4.webp" alt="Skateboard">
+                <h3>camisa  </h3>
+                <p>Precio: $65</p>
+                <button onclick="agregar('camisa 9',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa3.jpg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <p>Precio: $65</p>
+                <button onclick="agregar('camisa 10',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa1.jpeg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <p>Precio: $65</p>
+                <button onclick="agregar('camisa 11',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa5.webp" alt="Skateboard">
+                <h3>camisa  </h3>
+                <p>Precio: $65</p>
+                <button onclick="agregar('camisa 12',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa4.webp" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 13',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa2.jpg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 14', 65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa1.jpeg" alt="Skateboard">
+                <h3>Scamisa </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 15',65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa5.webp" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 16', 65)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa3.jpg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 17',65 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa3.jpg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 18',65 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa1.jpeg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 19',65 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa2.jpg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 20',65 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa3.jpg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 21',65 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa5.webp" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa22',65 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa1.jpeg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 23',65 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa3.jpg" alt="camisa" >
+                <h3>camisa </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa',65 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="camisa2.jpg" alt="Skateboard">
+                <h3>camisa  </h3>
+                <P>Precio: $65</P>
+                <button onclick="agregar('camisa 25 ',65 )">Agregar al carrito</button>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <div class="encabezado-sidebar">
+                <h2>Carrito</h2>
+                <button onclick="cerrarCarrito()">X</button>
+            </div>
+            <div id="listaCarrito">
+            </div>
+            <h3>Total: $<span id="total">0</span></h3>
+            <button onclick="vaciarCarrito()">Vaciar carro</button>
+            <button onclick="abrirPago()">Finalizar compra</button>
+        </div>
+        <div id="modalPago" class="modal">
+            <div class="contenido-modal">
+                <h2>Pago</h2>
+                <input  type="text"  id="nombre" required placeholder="Nombre del titular">
+                <input  type="text"  id="tarjeta" maxlength="16" required placeholder="Numero de tarjeta">
+                <input  type="month"  id="fecha" required placeholder="MM/YY">
+                <input  type="password"  id="cvv" maxlength="3" required placeholder="CVV">
+                <button onclick="pagar()">Pago</button>
+                <button onclick="cerrarPago()">Cerrar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+    <p>Hecho por Mateo&copy;</p>
+    </footer>
+    <script src="tienda.js"></script>
+</body>
+    
+</body>
+</html>
