@@ -15,6 +15,35 @@ header{
     align-items: center;
     padding: 20px 40px;
 }
+.acciones{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.acciones a{
+    color: white;
+    text-decoration: none;
+    font-size:18px ;
+    margin-left: auto;
+}
+.acciones a:hover{
+    color: #e50d0d;
+}
+.acciones button{
+    background: #dc3545;
+}
+.acciones button{
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+.acciones button:hover{
+    background: #b52a37;
+}
 header a{
     color: white;
     text-decoration: none;
@@ -37,12 +66,18 @@ main{
     width: 100%;
     padding: 12px;
     margin: 10px 0;
+    border: 1px solid#ccc;
+    border-radius:8px;
+    outline: none;
+}
+.formulario input:focus,
+.formulario select:focus{
+    border-color: #0d1e4e;
 }
 .formulario button{
     width: 100%;
     padding: 12px;
     border: none;
-    background: #0d1e4e;
     color: white;
     cursor: pointer;
     border-radius: 8px;
@@ -67,6 +102,9 @@ th{
 }
 td img{
     border-radius: 8px;
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
 }
 td button{
     margin: 2px;
