@@ -1,46 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="masinfocss.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <title>
-            Sin limites-Un mundo conectado
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="masinfocss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>
+        Sin limites
         </title>
     </head>
     <body>
         <header>
             <div class="logo">
                 <img src="logo" alt="aquiva el logo">
-                <h1>Sin limites-Un mundo conectado</h1>
+                <h1>Sin limites</h1>
             </div>
             <nav>
                 <a href="Inicio.html">Inicio</a>
                 <a href="proyecto.html">Proyecto</a>
                 <a href="contactos.html">Contacto</a>
             </nav>
+            <div class="estrellas" id="estrellas"></div>
         </header>
-        <!--fondo-->
-    <div class="container">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
     </div>
     <main>
-        <!--titulo-->
         <section class="cabeza">
                 <h1 class="titulo">
                     Historia del Braille
                 </h1>
         </section>
-        <!--fin titulo-->
-
-        <!--Separador-->
-        <div class="separacion"></div>
-        <!--fin Separador-->
-
-        <!--parte uno-->
         <section class="contenido">
             <div class="fila">
                 <div class="parrafo">
@@ -53,9 +43,6 @@
                 </div>
             </div>
         </section>
-        <!-- fin parte uno-->
-        
-        <!--TITULO dos-->
         <section class="cabeza1">
             <div class="titulo1">
                 <h2 class="titulo">
@@ -63,9 +50,6 @@
                 </h2>
             </div>
         </section>
-        <!--titulo dos-->
-
-        <!--parte dos-->
         <section class="contenido1">
             <div class="fila">
                 <div class="imagen">
@@ -77,9 +61,6 @@
                 </p>
             </div>
         </section>
-        <!--fin parte dos-->
-
-        <!--titulo 3-->
         <section class="cabeza">
         <div class="titulo2">
             <p class="titulo">
@@ -87,9 +68,6 @@
             </p>
         </div>
         </section>
-        <!--fin titulo-->
-
-        <!--parte tres-->
         <section class="contenido">
             <div class="fila">
             <div class="texto1">
@@ -114,7 +92,6 @@
     <footer class="footer">
         <div class="contenedor">
             <div class="footer-row">
-                <!--coso1-->
                 <div class="footer-links">
                     <h4>Grupo</h4>
                     <ul>
@@ -124,7 +101,6 @@
                         <li><a href="contactos.html">Contacto</a></li>
                     </ul>
                 </div>
-                <!--coso2-->
                 <div class="footer-links">
                     <h4>Ayuda</h4>
                     <ul>
@@ -133,7 +109,6 @@
                         <li><a href="#">Mision de la pagina</a></li>
                         <li><a href="#">Recursos</a></li>
                     </ul>
-                <!--coso3-->
                     <div class="footer-links">
                     <h4>Siguenos</h4>
                         <div class="social-link">
@@ -144,5 +119,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+    const cantidad = 150;
+    const contenedor = document.getElementById("estrellas");
+    if(contenedor) {
+        for(let i=0; i<cantidad; i++){
+            let estrella = document.createElement("div");
+            estrella.classList.add("estrella");
+            let size = Math.random()*3 + 1;
+            estrella.style.width = size+"px";
+            estrella.style.height = size+"px";
+            estrella.style.left = Math.random()*100 + "%";
+            estrella.style.animationDuration = (Math.random()*6 + 4)+"s";
+            estrella.style.animationDelay = Math.random()*10 + "s";
+            contenedor.appendChild(estrella);
+        }
+    }
+});
+    </script>
     </body>
 </html>

@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="alfabeto.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <title>
-            Sin limites un mundo conectado
-        </title>
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <img src="logo" alt="aquivaellogo">
-                <h1>Sin limites-Un mundo conectado</h1>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="alfabeto.css">
+    <title>Sin limites</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo" alt="aquivaellogo">
+            <h1>Sin limites</h1>
+        </div>
             <nav>
                 <a href="Inicio.html">Inicio</a>
                 <a href="proyecto.html">Proyecto</a>
@@ -21,29 +20,16 @@
                 <a href="Mas info.html">Mas info</a>
             </nav>
         </header>
-            <!--fondo-->
-            <div class="container">
-                <div id="stars"></div>
-                <div id="stars2"></div>
-                <div id="stars3"></div>
-            </div>
+            <div class="estrellas" id="estrellas"></div>
             <main>
-                <!--titulo-->
                 <section class="cabeza">
                     <h1 class="titulo">
                         Alfabeto en Braille
                     </h1>
                 </section>
-                <!--fin titulo-->
-                <!--separador nose porq esta si no separa nada-->
-                <div class="separacion"></div>
-                <!--fin separardor-->
-                <!--parte uno-->
                 <section class="imagen">
                     <img src="image 5.png" alt="Imagen braille">
                 </section>
-                <!--fin parte uno-->
-                <!--inicio titulo dos-->
                 <section class="cabeza">
                     <div class="contenido">
                     <h1 class="titulo">
@@ -51,8 +37,6 @@
                     </h1>
                     </div>
                 </section>
-                <!--fin titulo-->
-                <!--iniicio parte 2-->
                 <section class="contenido">
                     <div class="fila">
                         <div class="parrafo">
@@ -83,7 +67,6 @@
         <footer class="footer">
             <div class="contenedor">
                 <div class="footer-row">
-                <!--coso1-->
                     <div class="footer-links">
                         <h4>Grupo</h4>
                         <ul>
@@ -93,7 +76,6 @@
                             <li><a href="contactos.html">Contacto</a></li>
                         </ul>
                     </div>
-                <!--coso2-->
                     <div class="footer-links">
                         <h4>Ayuda</h4>
                         <ul>
@@ -102,7 +84,6 @@
                             <li><a href="#">Mision de la pagina</a></li>
                             <li><a href="#">Recursos</a></li>
                         </ul>
-                <!--coso3-->
                         <div class="footer-links">
                         <h4>Siguenos</h4>
                             <div class="social-link">
@@ -113,5 +94,24 @@
                 </div>
             </div>
         </footer>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+    const cantidad = 150;
+    const contenedor = document.getElementById("estrellas");
+    if(contenedor) {
+        for(let i=0; i<cantidad; i++){
+            let estrella = document.createElement("div");
+            estrella.classList.add("estrella");
+            let size = Math.random()*3 + 1;
+            estrella.style.width = size+"px";
+            estrella.style.height = size+"px";
+            estrella.style.left = Math.random()*100 + "%";
+            estrella.style.animationDuration = (Math.random()*6 + 4)+"s";
+            estrella.style.animationDelay = Math.random()*10 + "s";
+            contenedor.appendChild(estrella);
+        }
+    }
+});
+        </script>
     </body>
 </html>

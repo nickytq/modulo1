@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin limites</title>
         <meta charset="UTF-8">
-        <script src="script.js"></script>
         <link rel="stylesheet" href="css.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <title>
@@ -13,26 +15,20 @@
         <header>
             <div class="logo">
                 <img src="logo" alt="aquiva el logo">
-                <h1>Sin limites-Un mundo conectado </h1>
+                <h1>Sin limites</h1>
             </div>
             <nav>
                 <a href="Mas info.html"> Mas info </a>
                 <a href="proyecto.html"> Proyecto </a>
                 <a href="contactos.html"> Contacto </a>
             </nav>
+                <div class="estrellas" id="estrellas"></div>
             <label class="switch">
                 <input type="checkbox" class="checkbox">
                 <div class="slider"></div>
             </label>
         </header>
-<!--FONDO-->
-    <div class="container">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-    </div>
     <main>
-<!--Titulo-->
         <section class="cabeza">
             <div class="titulo">
             <h1 class="titulo1">
@@ -40,9 +36,6 @@
             </h1> 
             </div>
         </section>
-<!--separador-->
-<div class="separacion"></div>
-<!--parte uno-->
         <section class="contenido">
             <div class="fila">
             <div class="texto1">
@@ -57,14 +50,11 @@
                 <img src="image 3.png" alt="Sistema de braille">
             </div>
             </div>
-        <!--Botones para redireccion-->
         <div class="botones">
             <a href="aprende mas .html" class="btn">Aprende Braille</a>
-            <a href="#" class="btn btn-secundario">Teclado braille</a>
+            <a href="teclado.html" class="btn btn-secundario">Teclado braille</a>
         </div>
         </section>
-<!--fin de parte uno jeje-->
-<!--titulo parte 2-->
         <section class="cabeza1">
             <div class="tittle">
                 <h2 class="titulo">
@@ -72,7 +62,6 @@
                 </h2>
             </div>
         </section>
-<!--FIN TITULO parte 2-->
         <section class="contenido1">
             <div class="fila">
                 <div class="imagen2">
@@ -85,7 +74,6 @@
                 </div>
             </div>
         </section>
-<!--fin segunda parte-->
         <section class="alfa">
             <div class="fila">
             <div class="afabeto">
@@ -97,7 +85,6 @@
     <footer class="footer">
         <div class="contenedor">
             <div class="footer-row">
-                <!--coso1-->
                 <div class="footer-links">
                     <h4>Grupo</h4>
                     <ul>
@@ -107,7 +94,6 @@
                         <li><a href="contactos.html">Contacto</a></li>
                     </ul>
                 </div>
-                <!--coso2-->
                 <div class="footer-links">
                     <h4>Ayuda</h4>
                     <ul>
@@ -116,7 +102,6 @@
                         <li><a href="#">Mision de la pagina</a></li>
                         <li><a href="#">Recursos</a></li>
                     </ul>
-                <!--coso3-->
                     <div class="footer-links">
                     <h4>Siguenos</h4>
                         <div class="social-link">
@@ -127,6 +112,24 @@
             </div>
         </div>
     </footer>
-    <script src="cambio de idioma.js"></script>
+    <script>
+                window.addEventListener('DOMContentLoaded', () => {
+    const cantidad = 150;
+    const contenedor = document.getElementById("estrellas");
+    if(contenedor) {
+        for(let i=0; i<cantidad; i++){
+            let estrella = document.createElement("div");
+            estrella.classList.add("estrella");
+            let size = Math.random()*3 + 1;
+            estrella.style.width = size+"px";
+            estrella.style.height = size+"px";
+            estrella.style.left = Math.random()*100 + "%";
+            estrella.style.animationDuration = (Math.random()*6 + 4)+"s";
+            estrella.style.animationDelay = Math.random()*10 + "s";
+            contenedor.appendChild(estrella);
+        }
+    }
+});
+    </script>
     </body>
 </html>
