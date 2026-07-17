@@ -1,270 +1,455 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+    <head>
 <meta charset="UTF-8">
-<title>Teclado Braille Accesible</title>
-<style>
-body {
-    margin: 0;
-    background: linear-gradient(to bottom, #1e293b, #0f172a, #000000);
-    background-attachment: fixed;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    text-align: center;
-}
-
-.estrellas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.estrella {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 0 8px white;
-    animation: caer linear infinite;
-}
-
-@keyframes caer {
-    0% { transform: translateY(-50px); opacity: 1; }
-    100% { transform: translateY(110vh); opacity: 0; }
-}
-
-header {
-    background: #020617;
-    padding: 15px;
-    font-size: 22px;
-    letter-spacing: 1px;
-}
-
-h2 { margin-top: 20px; }
-
-.contenedor {
-    display: grid;
-    grid-template-columns: repeat(2, 140px);
-    gap: 18px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.boton {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: none;
-    background: #1e293b;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.boton:hover { transform: scale(1.05); }
-
-.activo {
-    background: #38bdf8;
-    color: #000000;
-}
-
-.panel { margin-top: 30px; }
-
-#texto {
-    font-size: 28px;
-    min-height: 40px;
-    background: #020617;
-    margin: 20px auto;
-    padding: 15px;
-    width: 60%;
-    border-radius: 10px;
-    white-space: pre-wrap;
-}
-
-button.control {
-    padding: 12px 18px;
-    margin: 8px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    background: #38bdf8;
-    color: black;
-}
-
-button.control:hover { background: #0ea5e9; }
-.modo { background: #22c55e !important; }
-footer { margin-top: 40px; opacity: .7; font-size: 14px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Sin Límites | Teclado Braille
+    </title>
+    <link rel="stylesheet" href="teclado.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 
 <body>
 
+
 <div class="estrellas" id="estrellas"></div>
 
-<header>Sistema de Escritura Braille Digital</header>
 
-<h2>Celda Braille Interactiva</h2>
-<p>Usa los botones o tu teclado físico (Teclas 1-6, Espacio y Enter)</p>
+
+<header class="header">
+
+
+<div class="logo">
+
+
+<a href="Inicio.html">
+
+<img src="Logo Crea J Sin Limites amarillosinfondo.png"
+alt="Logo Sin Límites">
+
+</a>
+
+
+
+<div class="logo-texto">
+
+<h1>
+Sin Límites
+</h1>
+
+
+<span>
+Un Mundo Conectado
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<nav class="menu">
+
+
+<a href="Inicio.html">
+
+<i class="fas fa-house"></i>
+
+Inicio
+
+</a>
+
+
+
+<a href="Mas info.html">
+
+<i class="fas fa-book-open"></i>
+
+Historia
+
+</a>
+
+
+
+
+<a href="proyecto.html" class="activo">
+
+<i class="fas fa-keyboard"></i>
+
+Braille
+
+</a>
+
+
+
+
+<a href="contactos.html">
+
+<i class="fas fa-envelope"></i>
+
+Contacto
+
+</a>
+
+
+
+</nav>
+
+
+
+</header>
+
+
+
+
+
+
+<main>
+
+
+
+<section class="hero">
+
+
+<div class="hero-texto">
+
+
+<h1>
+
+<i class="fas fa-keyboard"></i>
+
+Teclado Braille Digital
+
+</h1>
+
+
+
+<p>
+
+Aprende a escribir utilizando el sistema Braille
+mediante una herramienta interactiva diseñada
+para mejorar la accesibilidad y la inclusión digital.
+
+</p>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<section class="teclado">
+
+
+<h2>
+
+Celda Braille Interactiva
+
+</h2>
+
+
+
+<p>
+
+Selecciona los puntos Braille o utiliza tu teclado físico
+(1-6, Enter, Espacio y Retroceso)
+
+</p>
+
+
+
+
+
 
 <div class="contenedor">
-    <button class="boton" data-dot="1">1</button>
-    <button class="boton" data-dot="4">4</button>
-    <button class="boton" data-dot="2">2</button>
-    <button class="boton" data-dot="5">5</button>
-    <button class="boton" data-dot="3">3</button>
-    <button class="boton" data-dot="6">6</button>
+
+
+<button class="boton" data-dot="1">1</button>
+
+<button class="boton" data-dot="4">4</button>
+
+<button class="boton" data-dot="2">2</button>
+
+<button class="boton" data-dot="5">5</button>
+
+<button class="boton" data-dot="3">3</button>
+
+<button class="boton" data-dot="6">6</button>
+
+
 </div>
+
+
+
+
 
 <div class="panel">
-    <button class="control" onclick="agregar()">Agregar letra (Enter)</button>
-    <button class="control" onclick="borrar()">Borrar (←)</button>
-    <button class="control" onclick="limpiar()">Limpiar todo</button>
-    <button class="control modo" onclick="contraste()">Modo alto contraste</button>
-    <div id="texto"></div>
+
+
+<button class="control" id="agregar">
+
+<i class="fas fa-plus"></i>
+
+Agregar letra
+
+</button>
+
+
+
+<button class="control" id="borrar">
+
+<i class="fas fa-delete-left"></i>
+
+Borrar
+
+</button>
+
+
+
+
+<button class="control" id="limpiar">
+
+<i class="fas fa-trash"></i>
+
+Limpiar
+
+</button>
+
+
+
+
+<button class="control contraste" id="contraste">
+
+<i class="fas fa-eye"></i>
+
+Alto contraste
+
+</button>
+
+
+
+
+<div id="texto">
+
 </div>
 
-<footer>Proyecto educativo de accesibilidad digital</footer>
 
-<script>
-let seleccion = [];
-let textoFinal = "";
 
-// Evento para los clics del mouse
-document.querySelectorAll(".boton").forEach(btn => {
-    btn.addEventListener("click", () => {
-        let dot = btn.dataset.dot;
-        if(seleccion.includes(dot)){
-            seleccion = seleccion.filter(d => d != dot);
-            btn.classList.remove("activo");
-        } else {
-            seleccion.push(dot);
-            btn.classList.add("activo");
-        }
-    });
-});
+</div>
 
-// --- CONTROL POR TECLADO FÍSICO CON LIMITADOR DE ESPACIOS ---
-document.addEventListener("keydown", (e) => {
-    if (e.repeat) return; 
 
-    let tecla = e.key;
 
-    // 1. Limitar del 1 al 6
-    if (tecla >= "1" && tecla <= "6") {
-        const botonMatriz = document.querySelector(`.boton[data-dot="${tecla}"]`);
-        if (botonMatriz) {
-            botonMatriz.click();
-        }
-    }
+</section>
 
-    // 2. Tecla Enter para procesar la letra
-    if (tecla === "Enter") {
-        e.preventDefault();
-        agregar();
-    }
 
-    // 3. Tecla Espacio (CORREGIDA Y LIMITADA)
-    if (tecla === " ") {
-        e.preventDefault(); // Evita que la página salte hacia abajo
-        
-        // LIMITADOR: Si no hay nada escrito o si el último carácter ya es un espacio, no hace nada
-        if (textoFinal.length === 0 || textoFinal.endsWith(" ")) {
-            return; 
-        }
 
-        textoFinal += " ";
-        document.getElementById("texto").textContent = textoFinal;
-        hablar("espacio");
-    }
 
-    // 4. Tecla Retroceso para borrar
-    if (tecla === "Backspace") {
-        borrar();
-    }
-});
 
-function mapaBraille(){
-    return {
-        "1":"a", "12":"b", "14":"c", "145":"d", "15":"e", "124":"f", "1245":"g", "125":"h", "24":"i", "245":"j",
-        "13":"k", "123":"l", "134":"m", "1345":"n", "135":"o", "1234":"p", "12345":"q", "1235":"r", "234":"s", "2345":"t",
-        "136":"u", "1236":"v", "2456":"w", "1346":"x", "13456":"y", "1356":"z"
-    };
-}
 
-function agregar(){
-    seleccion.sort();
-    let clave = seleccion.join("");
-    let letra = mapaBraille()[clave] || "";
+<section class="explicacion">
 
-    if(letra == ""){
-        alert("Combinación no válida");
-        return;
-    }
 
-    textoFinal += letra;
-    document.getElementById("texto").textContent = textoFinal;
-    hablar(letra);
-    resetDots();
-}
+<h2>
 
-function hablar(texto){
-    let voz = new SpeechSynthesisUtterance(texto);
-    voz.lang = "es-ES";
-    speechSynthesis.speak(voz);
-}
+¿Cómo funciona?
 
-function borrar(){
-    textoFinal = textoFinal.slice(0,-1);
-    document.getElementById("texto").textContent = textoFinal;
-}
+</h2>
 
-function limpiar(){
-    textoFinal = "";
-    document.getElementById("texto").textContent = "";
-    resetDots();
-}
 
-function resetDots(){
-    seleccion = [];
-    document.querySelectorAll(".boton").forEach(btn => {
-        btn.classList.remove("activo");
-    });
-}
 
-function contraste(){
-    if(document.body.style.backgroundColor === "black"){
-        document.body.style.background = "linear-gradient(to bottom, #1e293b, #0f172a, #000000)";
-        document.body.style.backgroundAttachment = "fixed";
-        document.body.style.color = "white";
-    }else{
-        document.body.style.background = "black";
-        document.body.style.color = "yellow";
-    }
-}
-window.addEventListener('DOMContentLoaded', () => {
-    const cantidad = 150;
-    const contenedor = document.getElementById("estrellas");
-    if(contenedor) {
-        for(let i=0; i<cantidad; i++){
-            let estrella = document.createElement("div");
-            estrella.classList.add("estrella");
-            let size = Math.random()*3 + 1;
-            estrella.style.width = size+"px";
-            estrella.style.height = size+"px";
-            estrella.style.left = Math.random()*100 + "%";
-            estrella.style.animationDuration = (Math.random()*6 + 4)+"s";
-            estrella.style.animationDelay = Math.random()*10 + "s";
-            contenedor.appendChild(estrella);
-        }
-    }
-});
-</script>
+<p>
+
+El sistema Braille utiliza combinaciones de seis puntos
+para representar letras y símbolos. Esta herramienta
+permite practicar la escritura y comprender cómo funciona
+este método de comunicación utilizado por personas con
+discapacidad visual.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<footer class="footer">
+
+
+<div class="contenedor">
+
+
+<div class="footer-row">
+
+
+
+<div class="footer-links">
+
+
+<h4>
+
+Navegación
+
+</h4>
+
+
+<ul>
+
+
+<li>
+<a href="Inicio.html">
+Inicio
+</a>
+</li>
+
+
+<li>
+<a href="Mas info.html">
+Historia
+</a>
+</li>
+
+
+<li>
+<a href="proyecto.html">
+Proyecto
+</a>
+</li>
+
+
+<li>
+<a href="contactos.html">
+Contacto
+</a>
+</li>
+
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div class="footer-links">
+
+
+<h4>
+
+Recursos
+
+</h4>
+
+
+<ul>
+
+
+<li>
+<a href="#">
+Sistema Braille
+</a>
+</li>
+
+
+<li>
+<a href="#">
+Aprendizaje
+</a>
+</li>
+
+
+<li>
+<a href="#">
+Accesibilidad
+</a>
+</li>
+
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="footer-links">
+
+
+<h4>
+Síguenos
+</h4>
+
+
+<div class="social-link">
+
+
+<a href="#">
+<i class="fab fa-facebook"></i>
+</a>
+
+
+<a href="#">
+<i class="fab fa-instagram"></i>
+</a>
+
+
+<a href="#">
+<i class="fab fa-youtube"></i>
+</a>
+
+
+<a href="#">
+<i class="fab fa-github"></i>
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+<div class="footer-copy">
+© 2026 Sin Límites - Un Mundo Conectado
+</div>
+</div>
+</footer>
+<script src="teclado.js"></script>
 </body>
 </html>
