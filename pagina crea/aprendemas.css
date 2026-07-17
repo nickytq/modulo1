@@ -1,0 +1,249 @@
+/*==========================
+RESET
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    font-weight:500;
+    background:#192335;
+    color:white;
+    overflow-x:hidden;
+    line-height:1.8;
+}
+
+h1,h2,h3{
+    font-weight:600;
+}
+
+/*==========================
+HEADER
+==========================*/
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:16px 40px;
+
+    background:rgba(24,35,133,.92);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:2px solid white;
+    transition:.3s;
+}
+
+.logo img:hover{
+    transform:scale(1.08) rotate(5deg);
+}
+
+.logo h1{
+    margin:0;
+    font-size:28px;
+    color:white;
+}
+
+nav{
+    display:flex;
+    gap:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:10px;
+    transition:.3s;
+    font-size:17px;
+}
+
+nav a:hover{
+    background:#3b82f6;
+    transform:translateY(-3px);
+}
+
+/*==========================
+TÍTULOS
+==========================*/
+
+.titulo{
+    text-align:center;
+    font-size:48px;
+    margin:60px 0 25px;
+    color:white;
+}
+
+/*==========================
+CONTENIDO
+==========================*/
+
+.contenido{
+    width:100%;
+    background:rgba(13,29,49,.9);
+    padding:70px 20px;
+}
+
+.fila{
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.texto{
+    width:100%;
+    max-width:900px;
+}
+
+.parrafo{
+    font-size:19px;
+    text-align:justify;
+    line-height:2;
+    color:#f2f2f2;
+}
+
+/*==========================
+SUBTÍTULO
+==========================*/
+
+.antesfila{
+    text-align:center;
+    font-size:28px;
+    margin:60px auto 30px;
+    color:white;
+    font-weight:600;
+}
+
+/*==========================
+LISTA
+==========================*/
+
+.lista{
+    max-width:950px;
+    margin:0 auto 70px;
+    padding:35px 45px;
+
+    background:#0d1d31;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    list-style:disc;
+}
+
+.lista li{
+    margin-bottom:18px;
+    margin-left:25px;
+    font-size:18px;
+    line-height:1.8;
+    color:white;
+}
+
+.lista li::marker{
+    color:#3b82f6;
+    font-size:1.2em;
+}
+
+/*==========================
+ESTRELLAS
+==========================*/
+
+.estrellas{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.estrella{
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    box-shadow:0 0 10px white;
+    animation:caer linear infinite;
+}
+
+@keyframes caer{
+
+    0%{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    90%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(calc(100vh + 200px));
+        opacity:0;
+    }
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .titulo{
+        font-size:36px;
+    }
+
+    .antesfila{
+        font-size:24px;
+    }
+
+    .parrafo{
+        font-size:17px;
+    }
+
+    .lista{
+        width:90%;
+        padding:25px;
+    }
+
+}
