@@ -91,12 +91,10 @@ nav i{
 .logo h1{
     font-size:22px;
 }
-
 nav{
     display:flex;
     gap:30px;
 }
-
 nav a{
     color:white;
     text-decoration:none;
@@ -106,11 +104,6 @@ nav a{
 nav a:hover{
     color:#66d1ff;
 }
-
-/* ==========================
-   SWITCH
-==========================*/
-
 .switch{
     margin-left:25px;
 }
@@ -151,33 +144,21 @@ nav a:hover{
     background:url("usa3.png");
     background-size:cover;
 }
-
-/* ==========================
-   TITULOS
-==========================*/
-
 .titulo,
 .titulo1{
     text-align:center;
     margin:50px 0;
     font-size:35px;
 }
-
-/* ==========================
-   SECCIONES
-==========================*/
-
 .contenido,
 .contenido1,
 .alfa{
     padding:70px 0;
 }
-
 .contenido,
 .alfa{
     background:rgba(13,29,49,.9);
 }
-
 .fila{
     max-width:1200px;
     margin:auto;
@@ -187,14 +168,12 @@ nav a:hover{
     gap:50px;
     padding:0 20px;
 }
-
 .texto,
 .texto1{
     flex:1;
     line-height:1.8;
     text-align:justify;
 }
-
 .imagen1,
 .imagen2{
     flex:1;
@@ -206,18 +185,12 @@ nav a:hover{
     width:320px;
     max-width:100%;
 }
-
-/* ==========================
-   BOTONES
-==========================*/
-
 .botones{
     display:flex;
     justify-content:center;
     gap:20px;
     margin-top:40px;
 }
-
 .btn{
     background:white;
     color:#0d1d31;
@@ -226,11 +199,9 @@ nav a:hover{
     text-decoration:none;
     transition:.3s;
 }
-
 .btn:hover{
     transform:translateY(-4px);
 }
-
 .btn-secundario{
     background:transparent;
     color:white;
@@ -241,11 +212,6 @@ nav a:hover{
     background:white;
     color:#0d1d31;
 }
-
-/* ==========================
-   ALFABETO
-==========================*/
-
 .alfabeto{
     color:white;
     text-decoration:none;
@@ -256,48 +222,36 @@ nav a:hover{
 .alfabeto:hover{
     color:#66d1ff;
 }
-
-/* ==========================
-   FOOTER
-==========================*/
-
 .footer{
     background:#030912;
     padding:70px 0;
 }
-
 .contenedor{
     width:90%;
     max-width:1200px;
     margin:auto;
 }
-
 .footer-row{
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
 }
-
 .footer-links{
     width:250px;
 }
-
 .footer-links h4{
     margin-bottom:20px;
     padding-bottom:10px;
     border-bottom:2px solid #00c3ff;
 }
-
 .footer-links ul li{
     margin-bottom:12px;
 }
-
 .footer-links a{
     color:white;
     text-decoration:none;
     transition:.3s;
 }
-
 .footer-links a:hover{
     color:#66d1ff;
     padding-left:6px;
@@ -393,10 +347,6 @@ nav a:hover{
     }
 
 }
-/*====================
-TIMELINE
-====================*/
-
 .timeline{
 
     width:100%;
@@ -508,9 +458,6 @@ TIMELINE
     line-height:1.7;
 
 }
-
-/* RESPONSIVE */
-
 @media(max-width:768px){
 
 .timeline-container::after{

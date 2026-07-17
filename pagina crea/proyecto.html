@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sin Límites | Proyecto</title>
@@ -156,199 +155,103 @@
         </div>
     </div>
 </section>
-<!--==========================
-ESTADÍSTICAS
-===========================-->
-
 <section class="estadisticas">
-
     <h2 class="titulo">
         Nuestro impacto
     </h2>
-
     <div class="contenedor-estadisticas">
-
         <div class="estadistica">
-
             <i class="fas fa-universal-access"></i>
-
             <h3>100%</h3>
-
             <p>
                 Enfoque en accesibilidad e inclusión tecnológica.
             </p>
-
         </div>
-
-
         <div class="estadistica">
-
             <i class="fas fa-braille"></i>
-
             <h3>6</h3>
-
             <p>
                 Puntos utilizados para formar caracteres Braille.
             </p>
-
         </div>
-
-
         <div class="estadistica">
-
             <i class="fas fa-laptop-code"></i>
-
             <h3>24/7</h3>
-
             <p>
                 Disponible para practicar escritura Braille.
             </p>
-
         </div>
-
-
         <div class="estadistica">
-
             <i class="fas fa-lightbulb"></i>
-
             <h3>1</h3>
-
             <p>
                 Solución creada para mejorar la independencia.
             </p>
-
         </div>
-
     </div>
-
 </section>
-
-
-<!--==========================
-BENEFICIOS
-===========================-->
-
 <section class="beneficios">
-
     <h2 class="titulo">
         Beneficios del proyecto
     </h2>
-
-
     <div class="lista-beneficios">
-
-
         <div class="beneficio">
-
             <i class="fas fa-eye"></i>
-
             <div>
-
                 <h3>Mayor accesibilidad</h3>
-
                 <p>
                     Facilita el acceso a la tecnología para personas con
                     discapacidad visual mediante herramientas adaptadas.
                 </p>
-
             </div>
-
         </div>
-
-
-
         <div class="beneficio">
-
             <i class="fas fa-graduation-cap"></i>
-
             <div>
-
                 <h3>Aprendizaje interactivo</h3>
-
                 <p>
                     Permite aprender Braille de una manera práctica,
                     sencilla y dinámica.
                 </p>
-
             </div>
-
         </div>
-
-
-
         <div class="beneficio">
-
             <i class="fas fa-network-wired"></i>
-
             <div>
-
                 <h3>Integración tecnológica</h3>
-
                 <p>
                     Conecta sistemas digitales con métodos de comunicación
                     inclusivos.
                 </p>
-
             </div>
-
         </div>
-
-
-
         <div class="beneficio">
-
             <i class="fas fa-heart"></i>
-
             <div>
-
                 <h3>Impacto social</h3>
-
                 <p>
                     Promueve una sociedad donde todas las personas puedan
                     participar sin limitaciones.
                 </p>
-
             </div>
-
         </div>
-
-
     </div>
-
-
 </section>
-
-
-
-<!--==========================
-CONCLUSIÓN
-===========================-->
-
 <section class="conclusion">
-
-
     <h2 class="titulo">
         Conclusión
     </h2>
-
-
     <p>
-
         Nuestro proyecto demuestra que la tecnología puede convertirse en una
         herramienta fundamental para la inclusión. Mediante el uso del sistema
         Braille y soluciones digitales, buscamos crear un espacio donde todas
         las personas puedan aprender, comunicarse y utilizar dispositivos
         tecnológicos con mayor facilidad.
-
         <br><br>
-
         "Sin límites - Un mundo conectado" representa el compromiso de crear
         soluciones accesibles que reduzcan barreras y permitan que la tecnología
         esté al alcance de todos.
-
     </p>
-
-
 </section>
     <footer class="footer">
         <div class="contenedor">
@@ -388,32 +291,19 @@ CONCLUSIÓN
     </footer>
 <script>
     window.addEventListener("DOMContentLoaded",()=>{
-
         const contenedor=document.getElementById("estrellas");
-
         if(!contenedor) return;
-
         const cantidad=200;
-
         for(let i=0;i<cantidad;i++){
-
             const estrella=document.createElement("span");
-
             estrella.classList.add("estrella");
-
             const tamaño=Math.random()*3+1;
-
             estrella.style.width=tamaño+"px";
             estrella.style.height=tamaño+"px";
-
             estrella.style.left=Math.random()*100+"%";
-
             estrella.style.top=(-Math.random()*100)+"px";
-
             estrella.style.animationDuration=(Math.random()*8+5)+"s";
-
             estrella.style.animationDelay=Math.random()*8+"s";
-
             contenedor.appendChild(estrella);
         }
     });
