@@ -234,7 +234,13 @@ nav a:hover{
 }
 
 
-/* ESTADISTICAS */
+.menu a:hover,
+.menu .activo{
+
+    background:#3b82f6;
+    transform:translateY(-3px);
+
+}
 
 
 .estadisticas{
